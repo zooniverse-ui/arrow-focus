@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ArrowFocus container demo</title>
+  </head>
+
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser-polyfill.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
+    <script src="./index.js"></script>
+
+    <script type="text/babel">
+      const Demo = React.createClass({
+        render() {
+          return <ZUIArrowFocus style={{
+            textAlign: 'center'
+          }}>
+            <table style={{
+              width: 'auto'
+            }}>
+              <tbody>
+                <tr>
+                  <td>
+                    <button type="button" autoFocus>1</button>
+                  </td>
+                  <td>
+                    <button type="button">2</button>
+                  </td>
+                  <td>
+                    <button type="button">3</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button type="button">4</button>
+                  </td>
+                  <td>
+                    <button type="button">5</button>
+                  </td>
+                  <td>
+                    <button type="button">6</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#">7</a>
+                  </td>
+                  <td>
+                    <input type="color" defaultValue="#888888" />
+                  </td>
+                  <td>
+                    <input type="text" defaultValue="9" size="2" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label tabIndex="0">
+                      <input type="checkbox" />{' '}
+                      *
+                    </label>
+                  </td>
+                  <td>
+                    <label tabIndex="0">
+                      <input type="checkbox" />{' '}
+                      0
+                    </label>
+                  </td>
+                  <td>
+                    <select>
+                      <option>#</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </ZUIArrowFocus>;
+        }
+      });
+
+      const container = document.createElement('div');
+      document.body.appendChild(container);
+      React.render(<Demo />, container);
+    </script>
+  </body>
+</html>
